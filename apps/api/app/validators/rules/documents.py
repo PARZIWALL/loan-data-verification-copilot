@@ -1,0 +1,1 @@
+"""Document completeness validation rules."""

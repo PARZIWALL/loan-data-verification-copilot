@@ -1,0 +1,1 @@
+"""Canonical loan persistence model."""

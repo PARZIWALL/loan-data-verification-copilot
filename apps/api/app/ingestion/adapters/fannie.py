@@ -1,0 +1,1 @@
+"""Fannie Mae source adapter."""

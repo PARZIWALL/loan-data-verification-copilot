@@ -1,0 +1,1 @@
+"""Exception API schemas."""
