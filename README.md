@@ -84,6 +84,11 @@ verbatim as realism anchors (their actual rates, balances, terms, credit scores 
 the remaining 32 are drawn from the same distributions. Defects are then injected
 deliberately, one per loan, so every rule has a visible example.
 
+Fannie Mae's equivalent dataset was not used: the brief lists both as optional stretch
+sources and explicitly recommends a synthetic organizer-style package for judging, and
+Fannie Mae's portal is registration-gated while Freddie Mac's sample file was directly
+available. Freddie Mac alone was sufficient for schema and value realism.
+
 ## Environment variables
 
 Backend (`apps/api/.env`, see `.env.example`):
