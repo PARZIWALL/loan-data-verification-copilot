@@ -6,8 +6,12 @@
 How AI and agentic coding tools were used to design, build, test, debug, review and document this
 system. It covers the development *process*, not only the AI feature inside the product.
 
-Every claim about the codebase in this document was verified against the repository at the time of
-writing: **290 tests passing, 17 validation rules, 24 API routes, 8 commits.**
+Every claim about the codebase in this document was fact-checked against the repository as it stood
+**at the time each section was written**, not assumed. Snapshot counts below (test count, rule
+count, route count) reflect that moment and will drift as the project continues — re-run
+`pytest --collect-only -q` in `apps/api` for the current figure rather than trusting a number frozen
+in prose. As of the last verification pass for this log: 290 tests, 17 validation rules, 24 API
+routes.
 
 ---
 

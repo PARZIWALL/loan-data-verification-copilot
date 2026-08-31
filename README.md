@@ -126,7 +126,7 @@ See `docs/ai_evaluation.md` for a scored evaluation across eight exception types
 
 ```bash
 cd apps/api
-python -m pytest -q            # 290 tests
+python -m pytest -q
 ```
 
 No network and no API key required — the Groq client is stubbed throughout.
