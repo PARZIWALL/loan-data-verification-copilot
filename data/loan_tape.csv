@@ -1,0 +1,42 @@
+loan_id,borrower_id,loan_type,origination_date,maturity_date,original_principal,current_balance,interest_rate,term_months,borrower_state,loan_purpose,credit_grade,employment_length,income_band,payment_status,days_past_due,servicer_name,last_payment_date,last_updated_at,document_status,source_system
+L-1001,B-2001,fixed_rate,2009-08-01,2029-09-01,155000.00,95000.00,0.05375,240,OH,refinance,C,17,middle,current,0,Northgate Capital,2026-08-21,2026-08-16,complete,loan_tape
+L-1002,B-2002,fixed_rate,2009-07-01,2024-08-01,250000.00,300000.00,0.04375,180,MN,home_improvement,A,25,low,current,0,Cornerstone Servicing,2026-08-06,2026-08-14,complete,loan_tape
+L-1003,B-2003,fixed_rate,2009-07-01,2039-08-01,620000.00,397555.83,0.05500,360,VA,home_improvement,C,9,high,current,0,Atlas Residential,2026-08-09,2026-08-07,,loan_tape
+L-1004,B-2004,fixed_rate,2009-09-01,2039-10-01,165000.00,127948.05,0.04625,360,PR,purchase,B,5,low,current,0,Atlas Residential,2026-08-25,2026-08-24,complete,loan_tape
+L-1005,B-2005,fixed_rate,2009-07-01,2039-08-01,175000.00,136911.30,0.05875,360,FL,cash_out_refinance,D,4,upper_middle,current,0,Northgate Capital,2026-08-20,2023-08-27,complete,loan_tape
+L-1006,B-DUPLICATE,fixed_rate,2019-06-01,2039-08-01,180000.00,195187.69,0.04875,360,UT,cash_out_refinance,C,15,high,current,0,Atlas Residential,2026-07-27,2026-08-17,complete,loan_tape
+L-1007,B-DUPLICATE,fixed_rate,2019-06-01,2039-08-01,180000.00,85820.31,0.04375,360,TX,cash_out_refinance,C,8,high,current,0,Northgate Capital,2026-08-09,2026-08-28,complete,loan_tape
+L-1008,B-2008,fixed_rate,2009-07-01,2039-08-01,148000.00,5000.00,0.04375,360,PR,refinance,B,9,middle,closed,0,Cornerstone Servicing,2026-08-21,2026-08-04,complete,loan_tape
+L-1009,B-2009,fixed_rate,2023-09-01,2043-09-01,70000.00,41979.35,0.04873,240,MN,refinance,A,6,upper_middle,current,45,Meridian Loan Servicing,2026-08-07,2026-08-14,complete,loan_tape
+L-1010,B-2010,fixed_rate,2016-06-01,2031-06-01,-5000.00,350026.02,0.05641,180,CA,purchase,B,23,moderate,current,0,Meridian Loan Servicing,2026-07-24,2026-08-09,complete,loan_tape
+L-1011,B-2011,fixed_rate,2022-05-01,2020-05-01,399000.00,295597.62,0.05681,180,OH,home_improvement,D,9,low,current,0,Cornerstone Servicing,2026-08-21,2026-08-16,complete,loan_tape
+L-1012,B-2012,fixed_rate,2016-10-01,2036-10-01,515000.00,322657.71,12.5,240,VA,cash_out_refinance,A,3,middle,current,0,Atlas Residential,2026-08-22,2026-08-24,complete,loan_tape
+L-1013,B-2013,fixed_rate,2019-06-01,2049-06-01,380000.00,252694.36,0.05858,360,TX,home_improvement,B,15,upper_middle,not_a_real_status,0,Northgate Capital,2026-08-01,2026-08-23,complete,loan_tape
+L-1014,B-2014,fixed_rate,2022-08-01,2052-08-01,216000.00,151911.81,0.04921,360,MN,purchase,B,16,middle,current,0,Meridian Loan Servicing,2026-07-27,2026-08-16,complete,loan_tape
+L-1015,B-2015,fixed_rate,2019-11-01,2039-11-01,102000.00,94098.73,0.05155,240,UT,cash_out_refinance,D,17,low,current,0,Meridian Loan Servicing,2026-08-19,2026-08-12,complete,loan_tape
+L-1016,B-2016,fixed_rate,2017-07-01,2037-07-01,84000.00,65850.88,0.04942,240,OH,cash_out_refinance,B,24,moderate,current,0,Northgate Capital,2026-08-09,2026-08-20,complete,loan_tape
+L-1017,B-2017,fixed_rate,2019-06-01,2049-06-01,316000.00,183266.19,0.04601,360,CA,refinance,B,11,low,current,0,Atlas Residential,2026-08-22,2026-08-23,complete,loan_tape
+L-1018,B-2018,fixed_rate,2023-03-01,2043-03-01,543000.00,358627.51,0.05438,240,OH,cash_out_refinance,D,16,moderate,current,0,Atlas Residential,2026-08-03,2026-08-19,complete,loan_tape
+L-1019,B-2019,fixed_rate,2020-10-01,2040-10-01,458000.00,325965.06,0.04608,240,OH,purchase,B,18,middle,current,0,Meridian Loan Servicing,2026-08-14,2026-08-30,complete,loan_tape
+L-1020,B-2020,fixed_rate,2018-11-01,2048-11-01,88000.00,63357.17,0.04967,360,VA,purchase,B,9,low,current,0,Meridian Loan Servicing,2026-07-27,2026-08-02,complete,loan_tape
+L-1021,B-2021,fixed_rate,2017-02-01,2037-02-01,152000.00,85730.66,0.04698,240,TX,purchase,C,22,moderate,current,0,Atlas Residential,2026-07-29,2026-08-21,complete,loan_tape
+L-1022,B-2022,fixed_rate,2023-07-01,2038-07-01,267000.00,194971.96,0.04728,180,CA,cash_out_refinance,D,3,high,current,0,Northgate Capital,2026-08-12,2026-08-27,complete,loan_tape
+L-1023,B-2023,fixed_rate,2017-01-01,2037-01-01,597000.00,483096.96,0.04587,240,UT,home_improvement,B,18,moderate,current,0,Cornerstone Servicing,2026-08-02,2026-08-15,complete,loan_tape
+L-1024,B-2024,fixed_rate,2020-04-01,2040-04-01,467000.00,440691.69,0.05497,240,UT,refinance,C,21,upper_middle,current,0,Meridian Loan Servicing,2026-08-16,2026-08-15,complete,loan_tape
+L-1025,B-2025,fixed_rate,2021-03-01,2036-03-01,570000.00,533570.32,0.04561,180,MN,home_improvement,D,16,moderate,current,0,Meridian Loan Servicing,2026-08-26,2026-08-26,complete,loan_tape
+L-1026,B-2026,fixed_rate,2015-04-01,2045-04-01,413000.00,375244.98,0.05708,360,VA,cash_out_refinance,D,11,moderate,current,0,Northgate Capital,2026-08-21,2026-08-14,complete,loan_tape
+L-1027,B-2027,fixed_rate,2021-04-01,2051-04-01,465000.00,420979.53,0.04444,360,FL,cash_out_refinance,C,20,moderate,current,0,Atlas Residential,2026-08-07,2026-08-19,complete,loan_tape
+L-1028,B-2028,fixed_rate,2021-09-01,2041-09-01,314000.00,194222.37,0.05631,240,FL,home_improvement,D,25,middle,current,0,Northgate Capital,2026-08-01,2026-08-01,complete,loan_tape
+L-1029,B-2029,fixed_rate,2022-06-01,2052-06-01,309000.00,211038.11,0.04630,360,FL,home_improvement,A,7,middle,current,0,Meridian Loan Servicing,2026-07-29,2026-08-24,complete,loan_tape
+L-1030,B-2030,fixed_rate,2020-07-01,2040-07-01,373000.00,230823.04,0.04767,240,CA,purchase,C,11,high,current,0,Atlas Residential,2026-08-26,2026-08-25,complete,loan_tape
+L-1031,B-2031,fixed_rate,2022-08-01,2037-08-01,235000.00,176275.18,0.05660,180,UT,home_improvement,C,13,low,current,0,Atlas Residential,2026-08-21,2026-08-16,complete,loan_tape
+L-1032,B-2032,fixed_rate,2023-10-01,2053-10-01,200000.00,121881.73,0.04685,360,OH,cash_out_refinance,C,24,moderate,current,0,Meridian Loan Servicing,2026-08-03,2026-08-05,complete,loan_tape
+L-1033,B-2033,fixed_rate,2015-12-01,2045-12-01,205000.00,149804.78,0.05009,360,OH,home_improvement,C,24,high,current,0,Northgate Capital,2026-08-19,2026-08-23,complete,loan_tape
+L-1034,B-2034,fixed_rate,2022-03-01,2042-03-01,600000.00,376469.45,0.05644,240,TX,cash_out_refinance,C,4,high,current,0,Atlas Residential,2026-08-12,2026-08-15,complete,loan_tape
+L-1035,B-2035,fixed_rate,2023-07-01,2043-07-01,449000.00,411857.56,0.05834,240,CA,refinance,C,24,low,current,0,Cornerstone Servicing,2026-08-23,2026-08-03,complete,loan_tape
+L-1036,B-2036,fixed_rate,2015-10-01,2030-10-01,428000.00,239321.14,0.05807,180,FL,refinance,A,11,moderate,current,0,Cornerstone Servicing,2026-08-03,2026-08-10,complete,loan_tape
+L-1037,B-2037,fixed_rate,2020-02-01,2040-02-01,351000.00,233853.81,0.04470,240,MN,refinance,B,24,upper_middle,current,0,Northgate Capital,2026-08-24,2026-08-11,complete,loan_tape
+L-1038,B-2038,fixed_rate,2019-05-01,2034-05-01,242000.00,174352.04,0.05046,180,VA,purchase,C,4,middle,current,0,Northgate Capital,2026-08-17,2026-08-17,complete,loan_tape
+L-1039,B-2039,fixed_rate,2019-10-01,2039-10-01,305000.00,172664.19,0.04996,240,MN,purchase,C,16,moderate,current,0,Meridian Loan Servicing,2026-08-17,2026-08-18,complete,loan_tape
+L-1040,B-2040,fixed_rate,2015-11-01,2035-11-01,370000.00,260123.25,0.05478,240,FL,cash_out_refinance,B,12,moderate,current,0,Atlas Residential,2026-08-02,2026-08-07,complete,loan_tape
+L-1041,B-2041,fixed_rate,2015-11-01,2035-11-01,not-a-number,260123.25,0.05478,240,FL,cash_out_refinance,B,12,moderate,current,0,Atlas Residential,2026-08-02,2026-08-07,complete,loan_tape

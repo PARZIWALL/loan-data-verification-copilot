@@ -1,1 +1,0 @@
-"""Record hashing utilities."""

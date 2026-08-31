@@ -1,0 +1,9 @@
+loan_id,current_balance,payment_status,days_past_due,last_updated_at
+L-1001,82000.00,current,0,2026-08-31
+L-1014,64250.00,current,0,2026-08-31
+L-1015,94098.73,delinquent,62,2026-08-31
+L-1016,65850.88,current,0,2026-08-20
+L-1017,183266.19,current,0,2026-08-23
+L-1018,358627.51,current,0,2026-08-19
+L-1019,325965.06,current,0,2026-08-30
+L-1020,63357.17,current,0,2026-08-02
