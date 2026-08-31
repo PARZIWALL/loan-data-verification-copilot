@@ -5,9 +5,6 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth";
 import { Button, ErrorNote } from "@/components/ui";
 
-// Seeded by the backend on startup (apps/api/app/core/seed.py). Shown on the login
-// screen because the brief requires test credentials for all three roles, and the
-// demo involves switching between them repeatedly.
 const TEST_ACCOUNTS = [
   { username: "data_operator", password: "data_operator_dev", label: "Data Operator", can: "Upload loan tapes" },
   { username: "reviewer", password: "reviewer_dev", label: "Reviewer", can: "Work the exception queue, use the AI copilot, verify" },
@@ -15,95 +12,11 @@ const TEST_ACCOUNTS = [
 ];
 
 export default function LoginPage() {
-  const { login } = useAuth();
-  const router = useRouter();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState<unknown>(null);
-  const [busy, setBusy] = useState(false);
-
-  async function submit(event: React.FormEvent, presetUser?: string, presetPass?: string) {
-    event.preventDefault();
-    setError(null);
-    setBusy(true);
-    try {
-      await login(presetUser ?? username, presetPass ?? password);
-      router.push("/dashboard");
-    } catch (loginError) {
-      setError(loginError);
-    } finally {
-      setBusy(false);
-    }
-  }
-
-  return (
-    <main className="mx-auto flex min-h-screen max-w-5xl items-center justify-center px-6 py-12">
-      <div className="grid w-full gap-8 md:grid-cols-2">
-        <div className="space-y-4">
-          <div>
-            <h1 className="text-2xl font-semibold text-slate-900">Loan Data Verification Copilot</h1>
-            <p className="mt-1 text-sm text-slate-600">
-              Ingest messy loan records, validate them deterministically, review exceptions with an
-              evidence-grounded AI copilot, and produce tamper-evident verified records.
-            </p>
-          </div>
-
-          <form onSubmit={submit} className="space-y-3 rounded-lg border border-slate-200 bg-white p-4">
-            <div>
-              <label htmlFor="username" className="block text-xs font-medium text-slate-600">Username</label>
-              <input
-                id="username"
-                value={username}
-                onChange={(event) => setUsername(event.target.value)}
-                autoComplete="username"
-                className="mt-1 w-full rounded border border-slate-300 px-3 py-1.5 text-sm"
-              />
-            </div>
-            <div>
-              <label htmlFor="password" className="block text-xs font-medium text-slate-600">Password</label>
-              <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                autoComplete="current-password"
-                className="mt-1 w-full rounded border border-slate-300 px-3 py-1.5 text-sm"
-              />
-            </div>
-            <ErrorNote error={error} />
-            <Button type="submit" disabled={busy || !username || !password}>
-              {busy ? "Signing in…" : "Sign in"}
-            </Button>
-          </form>
-        </div>
-
-        <div className="rounded-lg border border-slate-200 bg-white p-4">
-          <h2 className="text-sm font-semibold text-slate-800">Test accounts</h2>
-          <p className="mt-1 text-xs text-slate-500">Each role sees a different console.</p>
-          <ul className="mt-3 space-y-2">
-            {TEST_ACCOUNTS.map((account) => (
-              <li key={account.username} className="rounded border border-slate-200 p-3">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <p className="text-sm font-medium text-slate-900">{account.label}</p>
-                    <p className="font-mono text-xs text-slate-500">
-                      {account.username} / {account.password}
-                    </p>
-                  </div>
-                  <Button
-                    variant="secondary"
-                    disabled={busy}
-                    onClick={(event) => submit(event, account.username, account.password)}
-                  >
-                    Use
-                  </Button>
-                </div>
-                <p className="mt-1.5 text-xs text-slate-600">{account.can}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </main>
-  );
+  const { login } = useAuth(); const router = useRouter();
+  const [username, setUsername] = useState(""); const [password, setPassword] = useState(""); const [error, setError] = useState<unknown>(null); const [busy, setBusy] = useState(false);
+  async function submit(event: React.FormEvent, presetUser?: string, presetPass?: string) { event.preventDefault(); setError(null); setBusy(true); try { await login(presetUser ?? username, presetPass ?? password); router.push("/dashboard"); } catch (loginError) { setError(loginError); } finally { setBusy(false); } }
+  return <main className="console-grid flex min-h-screen items-center justify-center bg-[#09111b] px-5 py-10"><div className="grid w-full max-w-5xl gap-5 lg:grid-cols-[1.05fr_.95fr]">
+    <section className="flex flex-col justify-between rounded-2xl border border-[#24384b] bg-[#0d1824] p-7 md:p-10"><div><div className="flex items-center gap-3"><span className="grid size-10 place-items-center rounded-xl bg-[#52c7e8] font-black text-[#07121b]">LV</span><span className="eyebrow text-[#52c7e8]">LoanVerify / secure access</span></div><h1 className="mt-14 max-w-lg text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#e8eef5] md:text-6xl">Clarity for every <span className="text-[#52c7e8]">loan record.</span></h1><p className="mt-6 max-w-md text-sm leading-6 text-[#8b9aab]">Ingest, validate, investigate, and certify loan data through one evidence-led operations console.</p></div><div className="mt-16 flex items-center gap-3 text-xs text-[#8b9aab]"><span className="size-2 rounded-full bg-[#52d5a0]" />Evidence services online <span className="text-[#35516a]">/</span> Audit-ready by default</div></section>
+    <section className="rounded-2xl border border-[#24384b] bg-[#101c29] p-6 shadow-[0_20px_60px_rgba(0,0,0,.2)] md:p-8"><div><p className="eyebrow text-[#52c7e8]">Workspace access</p><h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#e8eef5]">Sign in to continue</h2><p className="mt-2 text-sm text-[#8b9aab]">Use your assigned operations credentials.</p></div><form onSubmit={submit} className="mt-7 flex flex-col gap-4"><label className="flex flex-col gap-2 text-xs font-semibold text-[#b5c2ce]">Username<input id="username" value={username} onChange={(event) => setUsername(event.target.value)} autoComplete="username" className="rounded-lg border border-[#35516a] bg-[#09111b] px-3 py-2.5 text-sm text-[#e8eef5] outline-none transition focus:border-[#52c7e8]" /></label><label className="flex flex-col gap-2 text-xs font-semibold text-[#b5c2ce]">Password<input id="password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} autoComplete="current-password" className="rounded-lg border border-[#35516a] bg-[#09111b] px-3 py-2.5 text-sm text-[#e8eef5] outline-none transition focus:border-[#52c7e8]" /></label><ErrorNote error={error} /><Button type="submit" disabled={busy || !username || !password} className="mt-1 w-full">{busy ? "Signing in…" : "Sign in"}</Button></form><div className="my-7 flex items-center gap-3 text-[10px] uppercase tracking-[0.16em] text-[#607286]"><span className="h-px flex-1 bg-[#24384b]" />Demo access<span className="h-px flex-1 bg-[#24384b]" /></div><div className="flex flex-col gap-2">{TEST_ACCOUNTS.map((account) => <div key={account.username} className="flex items-center justify-between gap-3 rounded-lg border border-[#24384b] bg-[#0d1824] p-3"><div><p className="text-sm font-semibold text-[#e8eef5]">{account.label}</p><p className="mt-0.5 font-mono text-[11px] text-[#8b9aab]">{account.username} / {account.password}</p></div><Button variant="secondary" disabled={busy} onClick={(event) => submit(event, account.username, account.password)}>Use</Button></div>)}</div></section>
+  </div></main>;
 }
