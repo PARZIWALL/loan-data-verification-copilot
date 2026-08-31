@@ -1,1 +1,0 @@
-"""Intain source adapter."""

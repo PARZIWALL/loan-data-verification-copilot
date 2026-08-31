@@ -1,1 +1,0 @@
-"""Freddie Mac source adapter."""
