@@ -192,6 +192,14 @@ exported, and appends an audit event. Re-export is allowed and never recomputes 
 apps/api      FastAPI backend, SQLAlchemy models, validation engine, AI services
 apps/web      Next.js 15 reviewer console (App Router, TypeScript, Tailwind)
 data          Demo CSVs (loan tape, servicer update, document manifest)
-docs          Architecture notes and AI evaluation
+docs          Architecture, AI development log, AI evaluation
 scripts       Demo data generation, seeding, and AI evaluation
 ```
+
+## Documentation
+
+| Document | Contents |
+|---|---|
+| `docs/architecture.md` | System design, data model, lifecycle, API surface, trade-offs |
+| `docs/AI_DEVELOPMENT_LOG.md` | How AI tooling was used to build this, prompts, rejected AI output, lessons |
+| `docs/ai_evaluation.md` | Scored evaluation of the AI copilot across eight exception types |
