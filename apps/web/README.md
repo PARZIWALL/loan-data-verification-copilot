@@ -4,9 +4,8 @@ Next.js 14 (App Router) + TypeScript + Tailwind. This is a **functional template
 data flow, API contracts, role routing and UI states are correct and complete; the visual
 design is deliberately plain and is expected to be refined (e.g. with Vercel v0).
 
-> **Not yet built or type-checked.** Node was unavailable on the machine that generated
-> this, so `npm install` / `next build` have never been run against it. Expect to fix
-> small compile issues on first build.
+Deployed at: https://loan-data-frontend.vercel.app — talks to the backend API, hosted
+on Render.
 
 ## Run
 

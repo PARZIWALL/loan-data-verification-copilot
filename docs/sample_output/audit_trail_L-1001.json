@@ -1,0 +1,197 @@
+{
+  "loan_id": "L-1001",
+  "items": [
+    {
+      "id": 3,
+      "event_type": "loan_imported",
+      "actor": "system",
+      "created_at": "2026-08-31T14:02:18Z",
+      "details": {
+        "loan_id": "L-1001",
+        "source_file": "loan_tape.csv",
+        "source_row_number": 2,
+        "source_system": "loan_tape",
+        "action": "created"
+      }
+    },
+    {
+      "id": 47,
+      "event_type": "validation_executed",
+      "actor": "system",
+      "created_at": "2026-08-31T14:02:19Z",
+      "details": {
+        "loan_id": "L-1001",
+        "rules_executed": 17,
+        "passed": 17,
+        "failed": 0,
+        "trigger": "ingestion"
+      }
+    },
+    {
+      "id": 812,
+      "event_type": "loan_imported",
+      "actor": "system",
+      "created_at": "2026-08-31T14:05:44Z",
+      "details": {
+        "loan_id": "L-1001",
+        "source_file": "servicer_update.csv",
+        "source_row_number": 2,
+        "source_system": "servicer_update",
+        "action": "source_recorded"
+      }
+    },
+    {
+      "id": 856,
+      "event_type": "validation_executed",
+      "actor": "system",
+      "created_at": "2026-08-31T14:05:45Z",
+      "details": {
+        "loan_id": "L-1001",
+        "rules_executed": 17,
+        "passed": 16,
+        "failed": 1,
+        "trigger": "ingestion"
+      }
+    },
+    {
+      "id": 857,
+      "event_type": "exception_created",
+      "actor": "system",
+      "created_at": "2026-08-31T14:05:45Z",
+      "details": {
+        "exception_id": 4,
+        "loan_id": "L-1001",
+        "type": "source_conflict",
+        "severity": "high",
+        "validation_result_id": 861,
+        "message": "Canonical loan data conflicts with a secondary source value."
+      }
+    },
+    {
+      "id": 903,
+      "event_type": "ai_recommendation_created",
+      "actor": "ai",
+      "created_at": "2026-08-31T14:18:02Z",
+      "details": {
+        "ai_recommendation_id": 1,
+        "exception_id": 4,
+        "loan_id": "L-1001",
+        "recommendation_type": "suggest_field_correction",
+        "confidence": 0.95,
+        "downgraded": false,
+        "model_name": "openai/gpt-oss-120b",
+        "prompt_version": "loan-review-v1",
+        "suggested_corrections": [
+          {
+            "field": "current_balance",
+            "current_value": 95000.0,
+            "suggested_value": 82000.0
+          }
+        ],
+        "evidence_citations": [
+          {
+            "source_id": 41,
+            "source_file": "servicer_update.csv",
+            "source_row_number": 2,
+            "field": "current_balance"
+          }
+        ]
+      }
+    },
+    {
+      "id": 904,
+      "event_type": "ai_recommendation_dispositioned",
+      "actor": "reviewer",
+      "created_at": "2026-08-31T14:19:54Z",
+      "details": {
+        "ai_recommendation_id": 1,
+        "exception_id": 4,
+        "loan_id": "L-1001",
+        "disposition": "accepted",
+        "reviewer_status": "accepted",
+        "reviewer_id": 2,
+        "review_action_id": 8,
+        "recommendation_type": "suggest_field_correction",
+        "applied_changes": [
+          {
+            "field": "current_balance",
+            "old_value": 95000.0,
+            "new_value": 82000.0,
+            "status": "updated",
+            "review_action_id": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": 905,
+      "event_type": "field_edited",
+      "actor": "reviewer",
+      "created_at": "2026-08-31T14:19:54Z",
+      "details": {
+        "loan_id": "L-1001",
+        "exception_id": 4,
+        "field": "current_balance",
+        "old_value": 95000.0,
+        "new_value": 82000.0,
+        "ai_recommendation_id": 1,
+        "review_action_id": 7
+      }
+    },
+    {
+      "id": 906,
+      "event_type": "validation_executed",
+      "actor": "system",
+      "created_at": "2026-08-31T14:19:55Z",
+      "details": {
+        "loan_id": "L-1001",
+        "rules_executed": 17,
+        "passed": 17,
+        "failed": 0,
+        "trigger": "field_edit_revalidation"
+      }
+    },
+    {
+      "id": 907,
+      "event_type": "exception_resolved",
+      "actor": "system",
+      "created_at": "2026-08-31T14:19:55Z",
+      "details": {
+        "exception_id": 4,
+        "loan_id": "L-1001",
+        "type": "source_conflict",
+        "resolved_by": "revalidation",
+        "previous_status": "open"
+      }
+    },
+    {
+      "id": 921,
+      "event_type": "verified_record_created",
+      "actor": "reviewer",
+      "created_at": "2026-08-31T14:22:07Z",
+      "details": {
+        "verified_loan_id": 1,
+        "loan_id": "L-1001",
+        "verified_by": "reviewer",
+        "record_hash": "e11f92562eb9dfe1f52374d7da81de35dafaacecbf9436a96867dbd719eb0a64",
+        "verification_timestamp": "2026-08-31T14:22:07Z"
+      }
+    },
+    {
+      "id": 934,
+      "event_type": "verified_record_exported",
+      "actor": "data_consumer",
+      "created_at": "2026-08-31T14:26:41Z",
+      "details": {
+        "verified_loan_id": 1,
+        "loan_id": "L-1001",
+        "actor": "data_consumer",
+        "export_timestamp": "2026-08-31T14:26:41Z"
+      }
+    }
+  ],
+  "page": 1,
+  "page_size": 50,
+  "total": 12,
+  "total_pages": 1
+}

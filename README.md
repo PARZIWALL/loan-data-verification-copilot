@@ -7,6 +7,17 @@ verified records with a SHA-256 fingerprint.
 
 The AI can recommend. Only a human can act.
 
+## Live deployment
+
+| Component | Where |
+|---|---|
+| Frontend | https://loan-data-frontend.vercel.app |
+| Backend API | Hosted on Render |
+
+The frontend calls the Render-hosted API directly; no separate setup is needed to try the
+live version. For full control (seeding your own demo data, running tests, using your own
+`GROQ_API_KEY`), run it locally — see **Setup** below.
+
 ## What it does
 
 ```
@@ -208,3 +219,4 @@ scripts       Demo data generation, seeding, and AI evaluation
 | `docs/architecture.md` | System design, data model, lifecycle, API surface, trade-offs |
 | `docs/AI_DEVELOPMENT_LOG.md` | How AI tooling was used to build this, prompts, rejected AI output, lessons |
 | `docs/ai_evaluation.md` | Scored evaluation of the AI copilot across eight exception types |
+| `docs/sample_output/` | Reference verified-record export and audit trail for `L-1001`, with a reproducible hash |
